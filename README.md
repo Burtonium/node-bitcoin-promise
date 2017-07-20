@@ -1,23 +1,23 @@
-# node-bitcoin-promise
+# node-litecoin-promise
 
 # Summary
 
-Add Promise support to [bitcoin](https:/github.com/freewil/node-bitcoin/blob/master/Readme.md) package.
+Add Promise support to [litecoin](https://github.com/gferrin/node-litecoin) package.
 It is backward compatible with the original package. If no callback function is
 passed in to a command a Promise is returned
 
 # Installation
 
 ```
-npm install bitcoin-promise
+npm install litecoin-promise
 ```
 
 # Example
 
 ```
-var bitcoin = require( 'bitcoin-promise' ) ;
+var litecoin = require( 'litecoin-promise' ) ;
 
-var client = new bitcoin.Client({
+var client = new litecoin.Client({
   host: 'rcorbish.ydns.eu',
   port: 18332,
   user: 'bitcoinrpc',
@@ -29,10 +29,10 @@ var client = new bitcoin.Client({
 client.getNewAddress()
   .then( function(addr){
     return client.validateAddress( addr ) ;
-  }) 
+  })
   .then( function(addrInfo){
     console.log( addrInfo ) ;
-  }) 
+  })
   .catch( function(err){
     console.log( err ) ;
   }) ;
